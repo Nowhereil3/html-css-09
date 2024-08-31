@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Card | Grocery mart</title>
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="./assets/Favicon/" />
+    <link rel="apple-touch-icon" sizes="60x60" href="./assets/Favicon//apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="./assets/Favicon//apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/Favicon//apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="./assets/Favicon//apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="./assets/Favicon//apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="./assets/Favicon//apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="./assets/Favicon//apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/Favicon//apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="./assets/Favicon//android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/Favicon//favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="./assets/Favicon//favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/Favicon//favicon-16x16.png" />
+    <link rel="manifest" href="./assets/Favicon//manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="./assets/Favicon//ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="stylesheet" href="./assets/Fonts/stylesheet.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+
+    <!-- Scripts -->
+    <script src="./assets/js/scripts.js"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header id="header" class="header"></header>
+    <script>
+      load("#header", "./template/header-logined.html");
+    </script>
+
+    <main class="profile">
+      <div class="container">
+        <div class="profile-container">
+          <div class="search-bar d-none d-md-flex">
+            <input type="text" name="" id="" class="search-bar__input" placeholder="Search for item" />
+            <button class="search-bar__submit">
+              <img src="./assets/icons/search.svg" alt="search" class="icon search-bar__icon" />
+            </button>
+          </div>
+        </div>
+
+        <div class="profile-container">
+          <div class="row">
+            <div class="col-3 col-xl-4 d-lg-none">
+              <aside class="profile__sidebar">
+                <div class="profile-user">
+                  <img src="./assets/img/avatar1.png" alt="avatar1" class="profile-user__avatar" />
+                  <h1 class="profile-user__title">Imran Khan</h1>
+                  <p class="profile-user__desc">Registered: 17th May 2022</p>
+                </div>
+
+                <!-- Menu 1 -->
+                <div class="profile-menu">
+                  <h3 class="profile-menu__title">Manage Account</h3>
+                  <ul class="profile-menu__list">
+                    <li>
+                      <a href="./edit-profile-personal.html" class="profile-menu__link">
+                        <span class="profile-menu__icon">
+                          <img src="./assets/icons/personal.svg" alt="personal" class="icon" />
+                        </span>
+                        Personal info
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#!" class="profile-menu__link">
+                        <span class="profile-menu__icon">
+                          <img src="./assets/icons/address.svg" alt="address" class="icon" />
+                        </span>
+                        Addresses
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#!" class="profile-menu__link">
+                        <span class="profile-menu__icon">
+                          <img src="./assets/icons/Communications & privacy.svg" alt="Communications" class="icon" />
+                        </span>
+                        Communications & privacy
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Menu 2 -->
+                <div class="profile-menu">
+                  <h3 class="profile-menu__title">My items</h3>
+                  <ul class="profile-menu__list">
+                    <li>
+                      <a href="#!" class="profile-menu__link">
+                        <span class="profile-menu__icon">
+                          <img src="./assets/icons/Reorder.svg" alt="Reorder" class="icon" />
+                        </span>
+                        Reorder
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#!" class="profile-menu__link">
+                        <span class="profile-menu__icon">
+                          <img src="./assets/icons/heart.svg" alt="address" class="icon" />
+                        </span>
+                        Lists
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#!" class="profile-menu__link">
+                        <span class="profile-menu__icon">
+                          <img src="./assets/icons/Registries.svg" alt="Registries" class="icon" />
+                        </span>
+                        Registries
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Menu 3 -->
+                <div class="profile-menu">
+                  <h3 class="profile-menu__title">Subscriptions & plans</h3>
+                  <ul class="profile-menu__list">
+                    <li>
+                      <a href="#!" class="profile-menu__link">
+                        <span class="profile-menu__icon">
+                          <img src="./assets/icons/Protection.svg" alt="Protection" class="icon" />
+                        </span>
+                        Protection plans
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Menu 4 -->
+                <div class="profile-menu profile-menu--bottom">
+                  <h3 class="profile-menu__title">Customer Service</h3>
+                  <ul class="profile-menu__list">
+                    <li>
+                      <a href="#!" class="profile-menu__link">
+                        <span class="profile-menu__icon">
+                          <img src="./assets/icons/help.svg" alt="help" class="icon" />
+                        </span>
+                        Help
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#!" class="profile-menu__link">
+                        <span class="profile-menu__icon">
+                          <img src="./assets/icons/warning.svg" alt="warning" class="icon" />
+                        </span>
+                        Terms of Use
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </aside>
+            </div>
+            <div class="col-9 col-xl-8 col-lg-12">
+              <div class="cart-info">
+                    <h2 class="cart-info__heading ">
+                      <a href="./profile.html" class="cart-info__icon--inline">
+                        <img src="./assets/icons/arrow-left.svg" alt="" class="icon">
+                        Add credit or debit card
+                      </a>
+                    </h2>
+                    <form action="" class="form">
+                      <div class="form__row">
+                        <div class="form__group form__group--add-newcard">
+                          <label for="First name" class="profile__label">First Name</label>
+                          <div class="form__input-text">
+                            <input
+                              type="text"
+                              name=""
+                              id="First name"
+                              class="form__group-input"
+                              placeholder="Imran"
+                              required
+                            />
+                            <img src="./assets/icons/warning-icon.svg" alt="" class="form__group-icon-error" />
+                          </div>
+                        </div>
+                        <div class="form__group form__group--add-newcard">
+                          <label for="Last Name" class="profile__label">Last Name</label>
+                          <div class="form__input-text">
+                            <input
+                              type="text"
+                              name=""
+                              id="Last Name"
+                              class="form__group-input"
+                              placeholder="Khan"
+                              required
+                            />
+                            <img src="./assets/icons/warning-icon.svg" alt="" class="form__group-icon-error" />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form__row">
+                        <div class="form__group form__group--add-newcard">
+                          <label for="Card Number" class="profile__label">Card Information</label>
+                          <div class="form__input-text">
+                            <input
+                              type="number"
+                              name=""
+                              id="Card Number"
+                              class="form__group-input"
+                              placeholder="Card Number"
+                              required
+                            />
+                            <img src="./assets/icons/warning-icon.svg" alt="" class="form__group-icon-error" />
+                          </div>
+                        </div>
+                        <div class="form__group form__group--add-newcard">
+                          <label for="Expiration Date" class="profile__label">Expiration Date</label>
+                          <div class="form__input-text">
+                            <input
+                              type="number"
+                              name=""
+                              id="Expiration Date"
+                              class="form__group-input"
+                              placeholder="MM/YY"
+                              required
+                            />
+                            <img src="./assets/icons/warning-icon.svg" alt="" class="form__group-icon-error" />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form__row">
+                        <div class="form__group form__group--add-newcard">
+                          <label for="CVV" class="profile__label">CVV</label>
+                          <div class="form__input-text">
+                            <input
+                              type="text"
+                              name=""
+                              id="CVV"
+                              class="form__group-input"
+                              placeholder="123"
+                              required
+                            />
+                            <img src="./assets/icons/warning-icon.svg" alt="" class="form__group-icon-error" />
+                          </div>
+                        </div>
+                        <div class="form__group form__group--add-newcard">
+                          <label for="Phone Number" class="profile__label">Phone Number</label>
+                          <div class="form__input-text">
+                            <input
+                              type="number"
+                              name=""
+                              id="Phone Number"
+                              class="form__group-input"
+                              placeholder="+089"
+                              required
+                            />
+                            <img src="./assets/icons/warning-icon.svg" alt="" class="form__group-icon-error" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form__row form__row--inline">
+                        <label for="profile__label--inline" class="profile__label profile__label--inline">Card Preferences</label>
+                        <label class="form__group-label">
+                          <input type="checkbox" name="" id="" class="form__group-checkbox" hidden />
+                          <span class="form__group-desc">Set as default card</span>
+                        </label>
+                      </div>
+                    </form>
+
+                    <div class="cart-info__bottom">
+                      <button class="btn btn--primary btn--rounded">Save Card</button>
+                      <button class="btn btn--text">Cancel</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer id="footer">
+      <div class="container"></div>
+    </footer>
+    <script>
+      load("#footer", "./template/footer.html");
+    </script>
+  </body>
+</html>

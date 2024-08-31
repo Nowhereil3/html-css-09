@@ -1,0 +1,244 @@
+@use "../abstracts";
+
+.form {
+  &:has(:invalid) &__submit-btn {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
+  &__error {
+    margin-top: 10px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: red;
+    display: none;
+  }
+
+  &__group {
+    margin-top: 30px;
+
+    &--add-newcard {
+      flex: 1;
+      margin-top: 0;
+    }
+
+    @include abstracts.screen(md) {
+      margin-top: 20px;
+    }
+
+    &:has(:invalid):has(.form__group-input:not(:placeholder-shown)) {
+      .form__input-text {
+        border-color: red;
+        background: rgba($color: red, $alpha: 0.1);
+      }
+
+      .form__error,
+      .form__group-icon-error {
+        display: block;
+      }
+
+      .form__group-icon {
+        display: none;
+      }
+    }
+
+    &-icon-error {
+      width: 24px;
+      height: 24px;
+      margin-left: 12px;
+      display: none;
+      animation: horizontal-shaking 0.5s;
+    }
+
+    &-input {
+      flex: 1;
+      margin-right: auto;
+
+      font-size: 1.8rem;
+      font-weight: 500;
+      line-height: 1.44;
+      background-color: transparent;
+      color: var(--text-color);
+
+      &::placeholder {
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 1.44;
+        color: #d2d1d6;
+      }
+    }
+
+    &--inline {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &-label {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding-left: 30px;
+
+      &::after,
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+      }
+
+      &::before {
+        width: 20px;
+        height: 20px;
+        border-radius: 5px;
+        left: 0;
+        border: 1.5px solid #9e9da8;
+      }
+
+      &::after {
+        width: 15px;
+        height: 8px;
+        border: 2px solid;
+        border-color: transparent transparent #fff #fff;
+        left: 3px;
+        rotate: -45deg;
+        top: 5px;
+        display: none;
+      }
+    }
+
+    &:has(:checked) {
+      .form__group-label::before {
+        background-color: #ffb700;
+        border-color: #ffb700;
+      }
+
+      .form__group-label::after {
+        display: block;
+      }
+    }
+    &-desc {
+      font-size: 1.5rem;
+      font-weight: 500;
+      line-height: 1.46;
+      color: #9e9da8;
+
+      @include abstracts.screen(md) {
+        font-size: 1.4rem;
+        font-weight: 400;
+      }
+    }
+
+    &-link {
+      color: #0071dc;
+      font-size: 1.5rem;
+      font-weight: 500;
+      line-height: 1.46;
+
+      @include abstracts.screen(md) {
+        font-size: 1.4rem;
+        font-weight: 400;
+      }
+    }
+  }
+
+  &__input-text {
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #d2d1d6;
+    border-radius: 10px;
+    height: 50px;
+
+    @include abstracts.screen(md) {
+      height: 48px;
+    }
+
+    &:focus-within {
+      border-color: #77dae6;
+    }
+  }
+
+  &__group-icon {
+    margin-left: 12px;
+  }
+
+  &__label {
+    font-size: 2.2rem;
+    line-height: 1.45;
+    font-weight: 500;
+    color: var(--text-color);
+
+    &--small {
+      display: block;
+      font-size: 1.4rem;
+      line-height: 1.42;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__select-wrap {
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    height: 45px;
+    border: 1px solid #d2d1d6;
+  }
+
+  &__select {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+
+    padding: 0 14px;
+    min-width: var(--width, 108px);
+
+    height: calc(100% - 10px);
+
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.42;
+    color: var(--text-color);
+  }
+
+  &__select + &__select {
+    border-left: 1px solid #d2d1d6;
+  }
+
+  &__tags {
+    display: flex;
+    gap: 10px 20px;
+  }
+
+  &__tag {
+    padding: 6px 12px;
+
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.42;
+    color: #9e9da8;
+    background: var(--filter-tag-bg);
+
+    &:hover {
+      color: var(--text-color);
+    }
+  }
+
+  &__row {
+    display: flex;
+    gap: 30px;
+    flex-shrink: 0;
+
+    @include abstracts.screen(lg) {
+      flex-direction: column;
+      gap: 0;
+    }
+
+    &--inline {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+}

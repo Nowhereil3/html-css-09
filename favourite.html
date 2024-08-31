@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Favourite List | Grocery mart</title>
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="./assets/Favicon/" />
+    <link rel="apple-touch-icon" sizes="60x60" href="./assets/Favicon//apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="./assets/Favicon//apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/Favicon//apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="./assets/Favicon//apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="./assets/Favicon//apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="./assets/Favicon//apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="./assets/Favicon//apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/Favicon//apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="./assets/Favicon//android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/Favicon//favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="./assets/Favicon//favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/Favicon//favicon-16x16.png" />
+    <link rel="manifest" href="./assets/Favicon//manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="./assets/Favicon//ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="stylesheet" href="./assets/Fonts/stylesheet.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+
+    <!-- Scripts -->
+    <script src="./assets/js/scripts.js"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header id="header" class="header"></header>
+    <script>
+      load("#header", "./template/header-logined.html");
+    </script>
+
+    <main class="checkout-detail">
+      <div class="container">
+        <div class="checkout-container">
+          <div class="search-bar d-none d-md-flex">
+            <input type="text" name="" id="" class="search-bar__input" placeholder="Search for item" />
+            <button class="search-bar__submit">
+              <img src="./assets/icons/search.svg" alt="search" class="icon search-bar__icon" />
+            </button>
+          </div>
+        </div>
+
+        <div class="checkout-container">
+          <ul class="breadcrumbs checkout-container__breadcrumbs">
+            <li class="breadcrumbs__item">
+              <a href="./index-logined .html" class="breadcrumbs__link">
+                Home
+                <img src="./assets/icons/arrow-right.svg" alt="arrow-right" />
+              </a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a href="#!" class="breadcrumbs__link breadcrumbs__link--current">Favorite</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="checkout-container">
+          <div class="row gy-xl-3">
+            <div class="col-12">
+              <div class="cart-info">
+                <h1 class="cart-info__heading">Favourite List</h1>
+                <p class="cart-info__desc">3 items</p>
+                <div class="cart-info__wrap-checkbox">
+                  <label class="cart-info__checkbox">
+                    <input type="checkbox" name="cart-info__checkbox" class="cart-info__checkbox-input" />
+                  </label>
+                </div>
+                <div class="cart-info__list">
+                  <!-- Cart-info Item 1 -->
+                  <div class="cart-info__item">
+                    <label class="cart-info__checkbox">
+                      <input type="checkbox" name="cart-info__checkbox" class="cart-info__checkbox-input" checked />
+                    </label>
+                    <a href="./product-detail.html" class="cart-info__link">
+                      <img src="./assets/img/cate-5.png" alt="cate-5" class="cart-info__thumb" />
+                    </a>
+                    <div class="cart-info__content">
+                      <div class="cart-info__content-left">
+                        <h3 class="cart-info__title">
+                          <a href="./product-detail.html"> Coffee Beans - Espresso Arabica and Robusta Beans </a>
+                        </h3>
+                        <p class="cart-item__price-wrap">$47.00 | <span class="cart-item__status">In Stock</span></p>
+                        <div class="cart-item__ctrl cart-item__ctrl--md-block">
+                          <div class="cart-item__input-wrap">
+                            <div class="cart-item__input">
+                              LavAzza
+                              <img src="./assets/icons/arrow-up-3.svg" alt="arrow-up-3" class="icon cart-item__icon" />
+                            </div>
+                            <div class="cart-item__input">
+                              <img src="./assets/icons/minus.svg" alt="minus" class="icon cart-item__icon" />
+                              <span>1</span>
+                              <img src="./assets/icons/plus.svg" alt="plus" class="icon cart-item__icon" />
+                            </div>
+                            <div class="cart-item__ctrl">
+                              <button class="cart-item__ctrl-btn">
+                                <img src="./assets/icons/heart-red.svg" alt="heart-2" class="cart-item__ctrl-icon" />
+                                Save
+                              </button>
+                              <button class="cart-item__ctrl-btn">
+                                <img src="./assets/icons/delete.svg" alt="delete" class="cart-item__ctrl-icon" />
+                                Delete
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="cart-info__content-right">
+                        <p class="cart-info__total-price">$47.00</p>
+                        <a href="./checkout.html" class="btn btn--primary btn--rounded cart-info__content-right-btn"
+                          >Check Out</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Cart-info Item 2 -->
+                  <div class="cart-info__item">
+                    <label class="cart-info__checkbox">
+                      <input type="checkbox" name="cart-info__checkbox" class="cart-info__checkbox-input" />
+                    </label>
+                    <a href="./product-detail.html" class="cart-info__link">
+                      <img src="./assets/img/cate-6.png" alt="cate-6" class="cart-info__thumb" />
+                    </a>
+                    <div class="cart-info__content">
+                      <div class="cart-info__content-left">
+                        <h3 class="cart-info__title">
+                          <a href="./product-detail.html">Lavazza Coffee Blends - Try the Italian Espresso</a>
+                        </h3>
+                        <p class="cart-item__price-wrap">$53.00 | <span class="cart-item__status">In Stock</span></p>
+                        <div class="cart-item__ctrl cart-item__ctrl--md-block">
+                          <div class="cart-item__input-wrap">
+                            <div class="cart-item__input">
+                              LavAzza
+                              <img src="./assets/icons/arrow-up-3.svg" alt="arrow-up-3" class="icon cart-item__icon" />
+                            </div>
+                            <div class="cart-item__input">
+                              <img src="./assets/icons/minus.svg" alt="minus" class="icon cart-item__icon" />
+                              <span>2</span>
+                              <img src="./assets/icons/plus.svg" alt="plus" class="icon cart-item__icon" />
+                            </div>
+                            <div class="cart-item__ctrl">
+                              <button class="cart-item__ctrl-btn">
+                                <img src="./assets/icons/heart-red.svg" alt="heart-2" class="cart-item__ctrl-icon" />
+                                Save
+                              </button>
+                              <button class="cart-item__ctrl-btn">
+                                <img src="./assets/icons/delete.svg" alt="delete" class="cart-item__ctrl-icon" />
+                                Delete
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="cart-info__content-right">
+                        <p class="cart-info__total-price">$106.00</p>
+                        <a href="./checkout.html" class="btn btn--primary btn--rounded cart-info__content-right-btn"
+                          >Check Out</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Cart-info Item 3 -->
+                  <div class="cart-info__item">
+                    <label class="cart-info__checkbox">
+                      <input type="checkbox" name="cart-info__checkbox" class="cart-info__checkbox-input" checked />
+                    </label>
+                    <a href="./product-detail.html" class="cart-info__link">
+                      <img src="./assets/img/cate-4.png" alt="cate-7" class="cart-info__thumb" />
+                    </a>
+                    <div class="cart-info__content">
+                      <div class="cart-info__content-left">
+                        <h3 class="cart-info__title">
+                          <a href="./product-detail.html">Qualità Oro Mountain Grown - Espresso Coffee Beans</a>
+                        </h3>
+                        <p class="cart-item__price-wrap">$38.65 | <span class="cart-item__status">In Stock</span></p>
+                        <div class="cart-item__ctrl cart-item__ctrl--md-block">
+                          <div class="cart-item__input-wrap">
+                            <div class="cart-item__input">
+                              LavAzza
+                              <img src="./assets/icons/arrow-up-3.svg" alt="arrow-up-3" class="icon cart-item__icon" />
+                            </div>
+                            <div class="cart-item__input">
+                              <img src="./assets/icons/minus.svg" alt="minus" class="icon cart-item__icon" />
+                              <span>1</span>
+                              <img src="./assets/icons/plus.svg" alt="plus" class="icon cart-item__icon" />
+                            </div>
+                            <div class="cart-item__ctrl">
+                              <button class="cart-item__ctrl-btn">
+                                <img src="./assets/icons/heart-red.svg" alt="heart-2" class="cart-item__ctrl-icon" />
+                                Save
+                              </button>
+                              <button class="cart-item__ctrl-btn js-toggle" toggle-target="#delete-confirm">
+                                <img src="./assets/icons/delete.svg" alt="delete" class="cart-item__ctrl-icon" />
+                                Delete
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="cart-info__content-right">
+                        <p class="cart-info__total-price">$38.65</p>
+                        <a href="./checkout.html" class="btn btn--primary btn--rounded cart-info__content-right-btn"
+                          >Check Out</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="cart-info__bottom">
+                  <div class="cart-info__row cart-info__row--block">
+                    <div class="cart-info__coutine">
+                      <a href="#!" class="cart-info__coutine-link">
+                        <img
+                          src="./assets/icons/arrow-left-2.svg"
+                          alt="arrow-left-2"
+                          class="icon cart-info__icon-bottom"
+                        />
+                        Continue Shopping
+                      </a>
+                    </div>
+                    <a
+                      href="./checkout.html"
+                      class="btn btn--primary btn--rounded cart-info__content-right-btn cart-info__bottom-btn"
+                      >All Check Out</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer id="footer">
+      <div class="container"></div>
+    </footer>
+    <script>
+      load("#footer", "./template/footer.html");
+    </script>
+
+    <!-- Dialog / Modal -->
+    <div class="dialog hide" id="delete-confirm">
+      <div class="dialog__content">
+        <div class="dialog__text">Lorem ipsum dolor sit amet consectetur.</div>
+        <div class="dialog__bottom">
+          <button class="btn btn--text dialog__btn">Cancel</button>
+          <button class="btn btn--primary dialog__btn btn__nomargin">Confirm</button>
+        </div>
+      </div>
+      <div class="dialog__overlay"></div>
+    </div>
+  </body>
+</html>

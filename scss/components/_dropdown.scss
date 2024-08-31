@@ -1,0 +1,198 @@
+@use "../abstracts";
+.dropdown {
+  display: none;
+  position: absolute;
+  width: min(1240px, 100%);
+  left: 0;
+  top: 55px;
+  padding-top: 74px;
+  &__inner {
+    position: relative;
+
+    max-height: min(528px, 100% - 134px);
+    padding: 30px;
+    background-color: var(--dropdown-color);
+    box-shadow: 0px 40px 90px 20px var(--dropdown-shadow);
+    border-radius: 20px;
+
+    @include abstracts.screen(lg) {
+      position: initial;
+      box-shadow: none;
+    }
+  }
+
+  &__inner::before {
+    position: absolute;
+    content: url(../icons/dropdown.svg);
+    top: -12px;
+    left: 365px;
+    filter: var(--dropdown-color-inner);
+
+    @include abstracts.screen(lg) {
+      display: none;
+    }
+  }
+
+  &__inner-2::before {
+    position: absolute;
+    content: url(../icons/dropdown.svg);
+    top: -12px;
+    left: 485px;
+    filter: var(--dropdown-color-inner);
+    @include abstracts.screen(lg) {
+      display: none;
+    }
+  }
+
+  &__inner-2 {
+    @include abstracts.screen(lg) {
+      margin-top: 10px;
+    }
+  }
+
+  &__inner-3::before {
+    position: absolute;
+    content: url(../icons/dropdown.svg);
+    top: -12px;
+    left: 587px;
+    filter: var(--dropdown-color-inner);
+    @include abstracts.screen(lg) {
+      display: none;
+    }
+  }
+
+  &__inner-3 {
+    @include abstracts.screen(lg) {
+      margin-top: 70px;
+    }
+  }
+}
+
+.top-menu {
+  height: 100%;
+  position: relative;
+
+  &__main {
+    height: 100%;
+    width: 292px;
+    border-right: 1px solid var(--top-menu__main-border);
+    @include abstracts.screen(lg) {
+      width: 100%;
+      border-right: 0;
+    }
+  }
+}
+
+.menu-column__icon {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  position: relative;
+
+  &-1 {
+    object-fit: contain;
+    width: 30px;
+    height: 30px;
+    @include abstracts.screen(xl) {
+      display: none;
+    }
+
+    @include abstracts.screen(lg) {
+      display: block;
+    }
+  }
+  &-2 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    object-fit: contain;
+    width: 24px;
+    height: 24px;
+    @include abstracts.screen(xl) {
+      display: none;
+    }
+
+    @include abstracts.screen(lg) {
+      display: block;
+    }
+  }
+}
+
+.menu-column {
+  + .menu-column {
+    margin-top: 20px;
+  }
+
+  display: flex;
+  &__content {
+    flex: 1;
+    margin-left: 14px;
+  }
+
+  &__heading {
+    margin-top: 4px;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--color-menu-heading);
+  }
+
+  &__list {
+    margin-top: 19px;
+  }
+
+  &__item {
+    &:hover .sub-menu {
+      display: grid;
+    }
+  }
+
+  &__item:has(:hover) > &__link {
+    color: #0071dc;
+    font-weight: 500;
+  }
+
+  &__link {
+    display: block;
+    padding: 7px 0;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.42;
+    color: var(--color-menu-text);
+  }
+
+  &__link:hover {
+    color: #0071dc;
+    font-weight: 500;
+  }
+}
+
+.sub-menu {
+  position: absolute;
+  inset: 0 0 0 292px;
+  padding-left: 30px;
+  display: none;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  overflow-y: auto;
+  @include abstracts.screen(lg) {
+    position: initial;
+    grid-template-columns: 1fr;
+    padding-left: 0;
+    padding-top: 10px;
+  }
+
+  &--notmain {
+    position: initial;
+    padding-left: 0;
+    inset: initial;
+    grid-template-columns: repeat(4, 1fr);
+    display: grid;
+    @include abstracts.screen(lg) {
+      position: initial;
+      grid-template-columns: 1fr;
+      padding-left: 0;
+      padding-top: 10px;
+    }
+  }
+}
